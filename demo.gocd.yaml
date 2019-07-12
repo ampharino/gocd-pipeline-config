@@ -34,3 +34,7 @@ pipelines:
                     command: bash
                     arguments: 
                       - ./gotham-todo/apply-infrastructure.sh
+                - exec:
+                    command: bash
+                    arguments:
+                      - ./gotham=todo/copy-static-files.sh
