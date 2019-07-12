@@ -8,13 +8,13 @@ pipelines:
         branch: master
     stages:
       - first-stage:
-        jobs:
-          list:
-            tasks:
-              - exec:
-                  command: ls
-                  arguments:
-                    - .
+          jobs:
+            list:
+              tasks:
+                - exec:
+                    command: ls
+                    arguments:
+                      - .
   todo-app:
     group: todo-app
     materials:
@@ -28,7 +28,9 @@ pipelines:
               tasks:
                 - exec:
                     command: bash
-                    arguments: ./build.sh
+                    arguments: 
+                      - ./build.sh
                 - exec:
                     command: bash
-                    arguments: ./apply-infrastructure.sh
+                    arguments: 
+                      - ./apply-infrastructure.sh
