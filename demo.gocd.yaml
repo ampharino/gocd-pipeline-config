@@ -6,15 +6,15 @@ pipelines:
       git-repo:
         git: https://github.com/ampharino/vue-gotham-todo.git
         branch: master
-      stages:
-        - first-stage:
-          jobs:
-            list:
-              tasks:
-                - exec:
-                    command: ls
-                    arguments:
-                      - .
+    stages:
+      - first-stage:
+        jobs:
+          list:
+            tasks:
+              - exec:
+                  command: ls
+                  arguments:
+                    - .
   todo-app:
     group: todo-app
     materials:
