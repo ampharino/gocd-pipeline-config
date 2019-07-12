@@ -30,7 +30,7 @@ pipelines:
                               - exec:
                                     command: bash
                                     arguments: ./build.sh
-                          tasks:
-                            - exec:
-                                command: bash
-                                arguments: ./apply-infrastructure.sh
+
+                              - exec:
+                                    command: bash
+                                    arguments: ./apply-infrastructure.sh
