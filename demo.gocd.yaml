@@ -23,17 +23,14 @@ pipelines:
                 git: https://github.com/ampharino/vue-gotham-todo.git
                 branch: master
         stages:
-            - first-stage:
+            - build:
                   jobs:
-                      install:
+                      build:
                           tasks:
                               - exec:
-                                    command: yarn install
-                      test:
+                                    command: bash
+                                    arguments: ./build.sh
                           tasks:
-                              - exec:
-                                    command: yarn test
-                      generate:
-                          tasks:
-                              - exec:
-                                    command: nuxt generate
+                            - exec:
+                                command: bash
+                                arguments: ./apply-infrastructure.sh
