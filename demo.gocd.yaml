@@ -15,21 +15,20 @@ pipelines:
                     command: ls
                     arguments:
                       - .
-
-    todo-app:
-      group: todo-app
-      materials:
-        git-repo:
-          git: https://github.com/ampharino/vue-gotham-todo.git
-          branch: master
-      stages:
-        - build:
-            jobs:
-              build:
-                tasks:
-                  - exec:
-                      command: bash
-                      arguments: ./build.sh
-                  - exec:
-                      command: bash
-                      arguments: ./apply-infrastructure.sh
+  todo-app:
+    group: todo-app
+    materials:
+      git-repo:
+        git: https://github.com/ampharino/vue-gotham-todo.git
+        branch: master
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: bash
+                    arguments: ./build.sh
+                - exec:
+                    command: bash
+                    arguments: ./apply-infrastructure.sh
