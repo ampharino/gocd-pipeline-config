@@ -29,8 +29,8 @@ pipelines:
                 - exec:
                     command: bash
                     arguments: 
-                      - gotham-todo/build.sh
+                      - ./gotham-todo/build.sh
                 - exec:
                     command: bash
                     arguments: 
-                      - gotham-todo/apply-infrastructure.sh
+                      - ./gotham-todo/apply-infrastructure.sh
