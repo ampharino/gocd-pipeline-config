@@ -22,18 +22,18 @@ pipelines:
             git-repo:
                 git: https://github.com/ampharino/vue-gotham-todo.git
                 branch: master
-          stages:
-              - first-stage:
-                    jobs:
-                        install:
-                            tasks:
-                                - exec:
-                                      command: yarn install
-                        test:
-                            tasks:
-                                - exec:
-                                      command: yarn test
-                        generate:
-                            tasks:
-                                - exec:
-                                      command: nuxt generate
+        stages:
+            - first-stage:
+                  jobs:
+                      install:
+                          tasks:
+                              - exec:
+                                    command: yarn install
+                      test:
+                          tasks:
+                              - exec:
+                                    command: yarn test
+                      generate:
+                          tasks:
+                              - exec:
+                                    command: nuxt generate
